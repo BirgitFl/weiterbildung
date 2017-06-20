@@ -1,0 +1,16 @@
+// Platzieren Sie Ihre Einstellungen in dieser Datei, um Standard- und Benutzereinstellungen zu überschreiben.
+{
+      "colorize.languages": [
+            "javascript",
+            "css",
+            "sass",
+            "scss",
+            "less",
+            "pcss",
+            "sss",
+            "stylus",
+            "xml",
+            "svg",
+            "typescript"
+    ]
+}

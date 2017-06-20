@@ -1,0 +1,44 @@
+<h1>
+ Attribute Directives
+</h1>
+<h2>ngClass / ngStyle</h2>
+<div [ngStyle]="{'background-color' : color}"></div>
+<hr>
+<h2>Custom Attribute Directive</h2>
+<p appHighlight [defaultColor]="'blue'" [highlightColor] ="'gray'"></p>
+<hr>
+<h1>Structural Directives</h1>
+<h2>*ngIf</h2>
+<div *ngIf="switch"> Nicht immer zu sehen</div>
+<!--obiges div mit *ngIf wird im Hintergrund von Angular umgestellt in: 
+<template [ngIf]="switch">
+<div>
+    Nicht immer zu sehen
+</div>
+</template>
+-->
+<button (click)="switch =!switch" class="btn btn-primary">Switch</button>
+<hr>
+<h2>*ngFor</h2>
+<ul>
+    <li *ngFor="let item of elemente; let i = index">{{item}} - (Index:{{i}} )</li>
+</ul>
+<h2>ngSwitch</h2>
+<div [ngSwitch]="value">
+    <p *ngSwitchCase ="10">10</p>
+    <p *ngSwitchCase ="100">100</p>
+    <p *ngSwitchDefault>Irgendwas</p>
+</div>
+<!--
+obiges ngSwitch könnte auch so geschrieben werden:
+<p [ngSwitch]="value">
+    <template [ngSwitchCase]="10"> 10 </template>
+     <template [ngSwitchCase]="100"> 100 </template>
+     <template ngSwitchDefault>Irgendwas</template>
+</p>
+-->
+<hr>
+<h2>UnlessDerective</h2>
+<div *appUnless="switch">
+    Ist das zu sehen?
+</div>
