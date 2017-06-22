@@ -1,3 +1,4 @@
+import { DropdownDirective } from './dropdown.directive';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -21,7 +22,8 @@ import { ShoppingListAddComponent } from './shopping-list/shopping-list-add.comp
     RecipeListComponent,
     RecipeDetailComponent,
     RecipeItemComponent,
-    ShoppingListAddComponent
+    ShoppingListAddComponent, 
+    DropdownDirective
   ],
   imports: [
     BrowserModule,
