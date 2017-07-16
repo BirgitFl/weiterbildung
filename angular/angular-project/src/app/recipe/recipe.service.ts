@@ -3,7 +3,7 @@ import { Ingredient } from '../shared/ingredient.model';
 
 
 export class RecipeService{
-private recipes: Recipe[]=[
+private recipes: Recipe[]= [
     new Recipe(
       'Schnitzel',
       'Sehr lecker!',

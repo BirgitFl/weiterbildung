@@ -23,18 +23,20 @@ recipeID: number;
   ngOnInit() {
 this.activatedRoute.params.subscribe(
 
-  params =>{
+  params => {
     this.recipeID = +params['id'];
     this.selectedRecipe = this.recipeService.getRecipe(this.recipeID);
   }
 );
   }
+ // tslint:disable-next-line:one-line
  onAddToList(){
    this.sls.addIngredients(this.selectedRecipe.ingredients);
  }
 onEdit(){
   this.router.navigate(['/rezepte', this.recipeID, 'bearbeiten']);
 }
+
 onDelete(){
   this.recipeService.deleteRecipe(this.recipeID);
   this.router.navigate(['/rezepte']);

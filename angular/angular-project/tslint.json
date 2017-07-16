@@ -29,9 +29,9 @@
     ],
     "member-access": false,
     "member-ordering": [
-      true,
-      "static-before-instance",
-      "variables-before-functions"
+      true
+      //"static-before-instance",
+     // "variables-before-functions"
     ],
     "no-arg": true,
     "no-bitwise": true,
@@ -65,8 +65,8 @@
       true,
       "check-open-brace",
       "check-catch",
-      "check-else",
-      "check-whitespace"
+      "check-else"
+     // "check-whitespace"
     ],
     "prefer-const": true,
     "quotemark": [

@@ -2,7 +2,7 @@ import { Router } from '@angular/router';
 
 
 import { Component, OnInit} from '@angular/core';
-import { Recipe } from "../recipe.model";
+import { Recipe } from '../recipe.model';
 import { RecipeService } from '../recipe.service';
 
 @Component({
@@ -17,6 +17,9 @@ export class RecipeListComponent implements OnInit {
   onNewRecipe(){
 this.router.navigate(['/rezepte', 'neu']);
   }
+deleteRecipe(id: number){
+  this.recipes.splice(id, 1);
+}
 
   ngOnInit() {
 this.recipes = this.recipeService.getRecipies();
